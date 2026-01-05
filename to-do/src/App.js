@@ -14,7 +14,7 @@ export default App;
 function Header() {
   return (
     <div>
-      <h1>To-do List App</h1>
+      <h1>Get Things Done!</h1>
     </div>
   );
 }
@@ -22,8 +22,8 @@ function Header() {
 function InputForm() {
   return (
     <form>
-      <input type="text" />
-      <Button>Add</Button>
+      <input type="text" placeholder="What's the task today?" />
+      <Button>Add Task</Button>
     </form>
   );
 }
