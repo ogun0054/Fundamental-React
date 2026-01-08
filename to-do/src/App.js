@@ -5,16 +5,16 @@ function App() {
   const [advice, setAdvice] = useState("");
   const [count, setCount] = useState(0);
 
-  async function getAdvice(increment = true) {
+  async function getAdvice() {
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
-
+    // alert("Clicking");
     setAdvice(data.slip.advice);
-    if (increment) setCount((c) => c + 1);
+    setCount((c) => c + 1);
   }
 
   useEffect(function () {
-    getAdvice(false);
+    getAdvice();
   }, []);
 
   return (
