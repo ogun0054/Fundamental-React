@@ -166,9 +166,21 @@ console.log(title, author, publicationDate, pages);
 // console.log(primaryGenre, SecondaryGenre);
 
 // const [primaryGenre, SecondaryGenre] = genres;
-console.log(primaryGenre, SecondaryGenre);
+// console.log(primaryGenre, SecondaryGenre);
 
 // Rest/ Spread Operation
 
 const [primaryGenre, SecondaryGenre, ...others] = genres;
 console.log(primaryGenre, SecondaryGenre, others);
+
+const newGenres = [...genres, "epic fantasy"];
+console.log(newGenres);
+
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2002-12-19",
+
+  //Overwriting an existing property
+  pages: 1210,
+};
+updatedBook;
