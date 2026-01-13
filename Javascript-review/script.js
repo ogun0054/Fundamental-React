@@ -165,5 +165,10 @@ console.log(title, author, publicationDate, pages);
 
 // console.log(primaryGenre, SecondaryGenre);
 
-const [primaryGenre, SecondaryGenre] = genres;
+// const [primaryGenre, SecondaryGenre] = genres;
 console.log(primaryGenre, SecondaryGenre);
+
+// Rest/ Spread Operation
+
+const [primaryGenre, SecondaryGenre, ...others] = genres;
+console.log(primaryGenre, SecondaryGenre, others);
