@@ -154,9 +154,9 @@ const book = getBook(2);
 
 const { title, author, publicationDate, pages, genres } = book;
 
-const aboutBook = `${author} published is book ${title} having ${pages} pages on ${publicationDate}`;
-aboutBook;
-console.log(title, author, publicationDate, pages);
+// const aboutBook = `${author} published is book ${title} having ${pages} pages on ${publicationDate}`;
+// aboutBook;
+// console.log(title, author, publicationDate, pages);
 
 // Destructuring of Arrays
 
@@ -184,3 +184,13 @@ const updatedBook = {
   pages: 1210,
 };
 updatedBook;
+
+// Template Literals
+
+const summary = `${title} is a ${pages}-page long book, was written by ${author} and published in ${publicationDate}`;
+summary;
+
+const aboutBook = `${author} published is book ${title} having ${pages} pages on ${
+  publicationDate.split("-")[0]
+}`;
+aboutBook;
