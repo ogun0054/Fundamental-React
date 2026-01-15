@@ -146,7 +146,7 @@ function getBook(id) {
 
 // Destructuring Objects & Array
 
-const book = getBook(2);
+const book = getBook(4);
 
 // const title = books.title;
 // const author = books.author;
@@ -181,7 +181,7 @@ const updatedBook = {
   moviePublicationDate: "2002-12-19",
 
   //Overwriting an existing property
-  pages: 1210,
+  // pages: 1210,
 };
 updatedBook;
 
@@ -190,7 +190,40 @@ updatedBook;
 const summary = `${title} is a ${pages}-page long book, was written by ${author} and published in ${publicationDate}`;
 summary;
 
-const aboutBook = `${author} published is book ${title} having ${pages} pages on ${
-  publicationDate.split("-")[0]
-}`;
+// function getYear(str) {
+//   return str.split("-")[0];
+// }
+
+const getYear = (str) => str.split("-")[0];
+
+const aboutBook = `${author} published is book ${title} having ${pages} pages on ${getYear(
+  publicationDate
+)}`;
 aboutBook;
+
+// Ternaries Instead of If/else statements
+
+const pageRange = pages > 1000 ? "Over a thousand" : "Less than 1000";
+pageRange;
+
+console.log(`The book has ${pageRange} pages`);
+
+// Arrow Functions
+
+// const arrowFunc = () => {};
+
+// console.log(getYear(publicationDate));
+
+// Changing that to Arrow function
+
+console.log(getYear(publicationDate));
+
+// Short Circuiting
+
+// Falsy Values : 0, "", null, undefined
+
+console.log(true && "Some string");
+console.log(false && "Some string");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+console.log("Ismail");
