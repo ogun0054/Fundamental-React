@@ -146,7 +146,7 @@ function getBook(id) {
 
 // Destructuring Objects & Array
 
-const book = getBook(4);
+const book = getBook(5);
 
 // const title = books.title;
 // const author = books.author;
@@ -224,6 +224,14 @@ console.log(getYear(publicationDate));
 
 console.log(true && "Some string");
 console.log(false && "Some string");
-console.log(hasMovieAdaptation && "This book has a movie");
+// console.log(hasMovieAdaptation && "This book has a movie");
 
-console.log("Ismail");
+console.log("Ismail" && "May Allah make my children Islamic scholars");
+console.log(0 && "Some string");
+
+console.log(true || "Some string");
+console.log(false || "Some string");
+
+console.log(book.translations.spanish);
+const spanishTranslation = book.translations.spanish;
+spanishTranslation;
