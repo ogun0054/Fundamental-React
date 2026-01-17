@@ -146,7 +146,7 @@ function getBook(id) {
 
 // Destructuring Objects & Array
 
-const book = getBook(5);
+const book = getBook(3);
 
 // const title = books.title;
 // const author = books.author;
@@ -197,7 +197,7 @@ summary;
 const getYear = (str) => str.split("-")[0];
 
 const aboutBook = `${author} published is book ${title} having ${pages} pages on ${getYear(
-  publicationDate
+  publicationDate,
 )}`;
 aboutBook;
 
@@ -235,3 +235,13 @@ console.log(false || "Some string");
 console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish;
 spanishTranslation;
+
+//OPtional Chaining
+function getTotalReviewCount() {
+  const goodReads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+
+  return goodReads + librarything;
+}
+
+console.log(getTotalReviewCount(book));
