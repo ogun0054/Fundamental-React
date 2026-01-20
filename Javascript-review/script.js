@@ -272,3 +272,18 @@ longBooks;
 
 const adventureBooks = books.filter(books => books.genres.includes("adventure")).map(book => book.title);
 adventureBooks;
+
+// Reduce Method
+
+const pagesAllBooks = books.reduce((acc, book) =>acc + book.pages , 0)
+pagesAllBooks;
+
+// The Array Sort Method
+
+const x = [3,8,4,0,9,2,1];
+const sorted = x.slice().sort((a,b) => a-b);
+sorted;
+x
+
+const sortedByPages = books.slice().sort((a,b) => b.pages -a.pages);
+sortedByPages
