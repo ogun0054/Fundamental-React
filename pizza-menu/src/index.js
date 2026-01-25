@@ -50,7 +50,7 @@ const pizzaData = [
 
 function App(){
     return (
-        <div>
+        <div className="container">
           <Header/>
           <Menu/>
           <Footer/>
@@ -60,25 +60,30 @@ function App(){
 
 
 function Header(){
-  return <h1>Fast React Pizza Inc.</h1>
+  // const style = {color: "red", fontSize: "48px", textTransform: "uppercase"};
+   return (
+  <header className="header">
+    <h1 >Fast React Pizza Inc.</h1>
+  </header>
+     );
 }
 
 function Menu(){
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza/>
       <Pizza/>
       <Pizza/>
-    </div>
+    </main>
   )
 }
 
 function Footer(){
   const hour = new Date().getHours();
-  const openHour = hour >= 12 ? "We're Open!" : "We're close!"
+  const openHour = hour >= 12 ? "We're currently Open!" : "We're close!"
 
-  return <footer>We're currently Open {openHour}</footer>
+  return <footer className="footer">We're currently Open {openHour}</footer>
   
 }
 
@@ -86,7 +91,7 @@ function Pizza(){
     return (
       <div className="">
         <img src="pizzas/spinaci.jpg" alt="spinaci pizza"/>
-        <h2>Pizza Spinaci</h2>
+        <h3>Pizza Spinaci</h3>
         <p>Tomato, mozarella, spinach, and ricotta cheese</p>
 
       </div>
