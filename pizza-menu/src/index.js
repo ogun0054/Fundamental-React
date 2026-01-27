@@ -112,3 +112,57 @@ root.render(
 );
 
 // Before React v18
+
+/**
+ * 
+ * First Code Challenge
+ * 
+ * function App() {
+  return (
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        
+        <SkillList />
+      </div>
+    </div>
+  );
+}
+
+function Avatar() {
+  return (
+    <img
+      src="https://plus.unsplash.com/premium_photo-1676117275133-56553ab7bd58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      width="440px"
+    />
+  );
+}
+
+function Intro() {
+  return (
+    <p>
+      I’m Ismail Ogundele, a lifelong learner and writer with a strong interest
+      in personal development, productivity, and purposeful living. I enjoy
+      breaking down complex ideas from books and life into clear, practical
+      insights—especially at the intersection of discipline, habits, and faith.
+      My focus is on learning deeply, growing intentionally, and applying
+      knowledge in ways that create real impact
+    </p>
+  );
+}
+
+function SkillList() {
+  return (
+    <ul className="skill-list">
+      <li className="skill">HTML</li>
+      <li className="skill">CSS</li>
+      <li className="skill">Javascript</li>
+      <li className="skill">React</li>
+      <li className="skill">Next.js</li>
+      <li className="skill">Node.js</li>
+    </ul>
+  );
+}
+
+ */
