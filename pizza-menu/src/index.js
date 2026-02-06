@@ -100,15 +100,15 @@ function Menu(){
 
 function Pizza({pizzaObj}){
   console.log(pizzaObj)
-if (pizzaObj.soldOut) return <p>Sold Out!</p>;
+// if (pizzaObj.soldOut) return <p>Sold Out!</p>;
 
     return (
-      <li className="pizza">
+      <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : "pizza"}`}>
         <img src={pizzaObj.photoName} alt={pizzaObj.name}/>
         <div>
           <h3>{pizzaObj.name}</h3>
           <p>{pizzaObj.ingredients}</p>
-          <span>{pizzaObj.price + 3}</span>
+          <span>{pizzaObj.soldOut ? "Sold Out!" : pizzaObj.price}</span>
         </div>
 
       </li>
@@ -201,5 +201,113 @@ function SkillList() {
     </ul>
   );
 }
+
+// Second Version
+
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
+
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB",
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00",
+  },
+];
+
+function App() {
+  return (
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        
+        <SkillList />
+      </div>
+    </div>
+  );
+}
+
+function Avatar() {
+  return (
+    <img
+      src="https://plus.unsplash.com/premium_photo-1676117275133-56553ab7bd58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      width="440px"
+    />
+  );
+}
+
+function Intro() {
+  return (
+    <p>
+      I’m Ismail Ogundele, a lifelong learner and writer with a strong interest
+      in personal development, productivity, and purposeful living. I enjoy
+      breaking down complex ideas from books and life into clear, practical
+      insights—especially at the intersection of discipline, habits, and faith.
+      My focus is on learning deeply, growing intentionally, and applying
+      knowledge in ways that create real impact
+    </p>
+  );
+}
+
+function SkillList() {
+  return (
+    <ul className="skill-list">
+      
+      {skills.map((skill) => (
+        <Skill skill={skill.skill} color={skill.color} level={skill.level} />
+      ))}
+    </ul>
+  );
+}
+
+function Skill({ skill, color, level }) {
+  return (
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      <span>
+        {level === "beginner" && "👶"}
+        {level === "intermediate" && "👍"}
+        {level === "advanced" && "💪"}
+      </span>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+
 
  */
