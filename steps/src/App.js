@@ -7,14 +7,21 @@ const messages = [
 ];
 
 function App() {
- const [step, setStep] = useState(1)
+ const [step, setStep] = useState(1);
+const [test, setTest] = useState({name : "Ismail"})
 
 
  function handlePrevious(){
     if (step > 1) setStep(step - 1)
  }
  function handleNext(){
-    if (step < 3) setStep(step + 1)
+    if (step < 3) setStep(step + 1) ;
+
+    setTest({name:"Ismail"})
+
+    // test.name = "Muhammad"
+      // Using state manually
+    // step = step + 1;
  }
  
   return (
