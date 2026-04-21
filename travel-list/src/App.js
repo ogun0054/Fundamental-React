@@ -32,9 +32,16 @@ function Logo(){
 }
 
 function Form(){
-  return <div className="add-form">
+  return <form className="add-form">
     <p>What do you need for your 🥰 trip?</p>
-  </div>
+    <select>
+      {Array.from({length : 20}, (_, i) => i + 1).map((num) => (
+        <option value={num} key={num}> {num} </option>
+      ))}   
+    </select>
+    <input type="text" placeholder="Item..." />
+    <button>Add</button>
+  </form>
 }
 
 function PackingList(){
